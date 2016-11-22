@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Ejercicio2</string>
+    <string name="Name_">Name:</string>
+    <string name="Surname_">Surname:</string>
+    <string name="Name">Name</string>
+    <string name="Surname">Surname</string>
+    <string name="Passport">Passport</string>
+    <string name="Nationality">Nationality</string>
+    <string name="UEcitizen">UEcitizen</string>
 </resources>

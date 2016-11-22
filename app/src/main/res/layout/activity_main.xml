@@ -11,72 +11,124 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Passport"
-            android:textSize="20sp"
-            android:id="@+id/passport2Text"
-            android:padding="3dip"
-            android:layout_weight="1" />
+        android:layout_height="wrap_content"
+        android:id="@+id/image"
+        android:background="@color/colorAccent">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/frontprofile"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:padding="1dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/sideprofile"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:padding="1dp"/>
+        </TableRow>
+        </TableLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/linearPassport"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/Passport"
+            android:textSize="20sp"
+            android:id="@+id/passportText"
+            android:padding="3dip"
+            android:layout_weight="1"
+            android:layout_marginTop="177dp"
+            android:gravity="center"/>
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TableRow><TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Passport"
-                android:textSize="20sp"
-                android:id="@+id/passportText"
-                android:padding="3dip"
-                android:layout_weight="1"
-                android:layout_marginTop="177dp"/>
+            <TableRow android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                >
+
+
             </TableRow>
-            <TableRow>
+            <TableRow android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Name:"
-                    android:gravity="right"
+                    android:text="@string/Name_"
+                    android:gravity="end"
                     android:id="@+id/nameText"/>
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
-                    android:gravity="left"
+                    android:hint="@string/Name"
+                    android:gravity="start"
                     android:id="@+id/nameEdit"
                     android:layout_weight="1" />
             </TableRow>
 
-            <TableRow> <TextView
+            <TableRow android:layout_width="wrap_content"
+                android:layout_height="wrap_content"> <TextView
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="Surname:"
+                android:text="@string/Surname_"
                 android:id="@+id/surnameText"
-                android:gravity="right" />
+                android:gravity="end"
+                />
 
             <EditText
                  android:layout_width="100dp"
                  android:layout_height="wrap_content"
-                 android:hint="Surname"
+                 android:hint="@string/Surname"
                  android:id="@+id/surnameEdit"
                  android:layout_weight="1"
-                 android:gravity="left"/>
+                 android:gravity="start"/>
+
             </TableRow>
-
-
         </TableLayout>
-        
 
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/check"
+        android:layout_below="@+id/linearPassport">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Nationality"
+                    android:id="@+id/nationality"
+                    android:gravity="start" />
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/UEcitizen"
+                    android:id="@+id/UEcitizen"
+                    android:gravity="end" />
+        </TableRow>
     </LinearLayout>
     
     <ScrollView
@@ -85,7 +137,46 @@
     
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></FrameLayout>
+        android:layout_height="wrap_content"
+        android:id="@+id/frame"
+        android:layout_below="@+id/check">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frame"
+        android:layout_marginTop="30dp"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:weight="1"
+                android:layout_gravity="start"/>
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:weight="1"
+                android:layout_gravity="center"/>
+            />
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:weight="1"
+                android:layout_gravity="end"
+                />
+        </TableRow>
+
+    </LinearLayout>
 </RelativeLayout>
 
 
